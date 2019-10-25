@@ -38,7 +38,7 @@ async function run() {
     try {
         const actionId = process.env.GITHUB_ACTION;
         const branchName = `integration/pulumi-terraform-bridge/${actionId}`;
-        const checkoutSHA = find_commit_sha(process.cwd());
+        const checkoutSHA = await find_commit_sha(process.cwd());
 
         const gopathBin = path.join(await find_gopath(), "bin");
         const newPath = `${gopathBin}:${process.env.PATH}`;
@@ -56,9 +56,6 @@ async function run() {
             },
         };
 
-        await exec("pwd");
-        await exec("ls", ["-la", "../"]);
-        await exec("ls", ["-la", "../pulumi-terraform-bridge"]);
         await exec("git", ["clone", downstreamRepo, downstreamDir]);
 
         await exec("git", ["checkout", "-b", branchName], inDownstreamOptions);
