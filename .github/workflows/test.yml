@@ -25,4 +25,6 @@ jobs:
         with:
           downstream-name: pulumi-vault
           downstream-url: https://github.com/pulumi/pulumi-vault
+          pulumi-bot-token: ${{ secrets.PULUMI_BOT_TOKEN }}
+          github-actions-token: ${{ secrets.GITHUB_TOKEN }}
 
