@@ -39,7 +39,13 @@ async function find_commit_sha(path: string, offset: number = 0): Promise<string
 async function run() {
     try {
         const checkoutSHA = process.env.GITHUB_SHA;
+        core.debug(`Checkout SHA: ${checkoutSHA}`)
         const branchName = `integration/pulumi-terraform-bridge/${checkoutSHA}`;
+
+        console.log(`Checkout SHA: ${checkoutSHA}`);
+        console.log(`Checkout SHA: ${process.env.GITHUB_ACTION}`);
+
+        return;
 
         // Ensure that the bot token is masked in the log output
         let hasPulumiBotToken = false;
