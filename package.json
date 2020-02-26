@@ -1,35 +1,25 @@
 {
-  "name": "typescript-action",
-  "version": "0.0.0",
+  "name": "action-test-provider-downstream",
+  "version": "3.0.0",
   "private": true,
-  "description": "TypeScript template action",
+  "description": "Test terraform bridge changes to providers downstream",
   "main": "lib/main.js",
   "scripts": {
-    "build": "tsc",
-    "test": "jest"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/jen20/action-test-provider-downstream.git"
   },
-  "keywords": [
-    "actions",
-    "node",
-    "setup"
-  ],
-  "author": "YourNameOrOrganization",
-  "license": "MIT",
+  "author": "James Nugent <james@jen20.com>",
+  "license": "MPL-v2",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/exec": "^1.0.1",
+    "@actions/core": "^1.2.2",
+    "@actions/exec": "^1.0.3",
     "@actions/github": "^1.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.19",
-    "@types/node": "^12.11.2",
-    "jest": "^24.9.0",
-    "jest-circus": "^24.9.0",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
+    "@types/node": "^12.12.28",
+    "typescript": "^3.8.2"
   }
 }
